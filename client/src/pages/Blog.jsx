@@ -4,6 +4,10 @@ import { blog_data, assets, comments_data } from '../assets/assets';
 import { useState as userState } from 'react';
 import Navbar from '../components/Navbar';
 import Moment from 'moment';
+import { Footer } from '../components/footer'
+import  Loader  from '../components/Loader'
+
+
 
 const Blog = () => {
   const {id} = useParams();
@@ -12,6 +16,9 @@ const Blog = () => {
 
   const [comments,setComments] = userState([])
 
+  const [name,setName] = userState('')
+  const [content,setContent] = userState('')
+
   const fetchBlogData= async()=>{
     const data= blog_data.find(item=>item._id===id)
     setData(data)
@@ -19,6 +26,12 @@ const Blog = () => {
 
   const fetchComments = async() => {
     setComments(comments_data)
+  }
+
+  const addComment = async() => {
+    e.preventDefault();
+
+
   }
 
   useEffect(()=>{
@@ -43,7 +56,7 @@ const Blog = () => {
         <div className='rich-text max-w-3xl mx-auto' dangerouslySetInnerHTML={{__html: data.description}}></div>
 
         <div className='mt-14 mb-10 max-w-3xl mx-auto'>
-          <p>Comments ({comments.length})</p>
+          <p className='font-semibold mb-4'>Comments ({comments.length})</p>
           <div className='flex flex-col gap-4'>
             {comments.map((item,index)=>(
               <div key={index} className='relative bg-primary/2 border border-primary/5 max-w-xl p-4 rounded text-gray-600'>
@@ -59,12 +72,30 @@ const Blog = () => {
           </div>
 
         </div>
-
+          {/* Add comment Section*/}
+          <div className='max-w-3xl mx-auto'>
+            <p className='font-semibold mb-4'>Add your comment</p>
+            <form onSubmit={addComment} className='flex flex-col item-start gap-4 max-w-lg'>
+              <input onChange={(e)=>setName(e.target.value)} value={name} type="text" placeholder='Name' required className='w-full p-2 border border-gray-300 rounded outline-none'/>
+              <textarea onChange={(e)=>setContent(e.target.value)} value={content} placeholder='Comment' className='w-full p-2 border border-gray-300 rounded outline-none h-48' required></textarea>
+              <button type='submit' className='bg-primary text-white rounded p-2 px-8 hover:scale-102 transition-all cursor-pointer'>Submit</button>
+            </form>
+          </div>
+          <div className='my-24 max-w-3xl mx-auto'>
+            {/* Social media links */}
+            <p className='font-semibold my-4'>Share this post</p>
+            <div className='flex'>
+              <img src={assets.facebook_icon} alt="" width={50}/>
+              <img src={assets.twitter_icon} alt="" width={50} />
+              <img src={assets.googleplus_icon} alt="" width={50} />
+            </div>
+          </div>
       </div>
+      <Footer />
 
 
     </div>
-  ) : <div>Loading...</div>
+  ) : <Loader />
 }
 
 export default Blog
