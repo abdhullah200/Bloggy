@@ -1,23 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { blog_data, assets, comments_data } from '../assets/assets';
-import { useState as userState } from 'react';
 import Navbar from '../components/Navbar';
 import Moment from 'moment';
-import { Footer } from '../components/footer'
-import  Loader  from '../components/Loader'
+import Footer from '../components/Footer'
+import Loader from '../components/Loader'
 
 
 
 const Blog = () => {
   const {id} = useParams();
 
-  const [data,setData] = userState(null)
+  const [data,setData] = useState(null)
 
-  const [comments,setComments] = userState([])
+  const [comments,setComments] = useState([])
 
-  const [name,setName] = userState('')
-  const [content,setContent] = userState('')
+  const [name,setName] = useState('')
+  const [content,setContent] = useState('')
 
   const fetchBlogData= async()=>{
     const data= blog_data.find(item=>item._id===id)
@@ -28,10 +27,9 @@ const Blog = () => {
     setComments(comments_data)
   }
 
-  const addComment = async() => {
+  const addComment = async(e) => {
     e.preventDefault();
-
-
+    // Add comment logic here
   }
 
   useEffect(()=>{
