@@ -1,0 +1,16 @@
+*   [33mc68b3b4[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m post and delete in server
+[31m|[m[32m\[m  
+* [32m|[m [33m443a3c3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m admin post, delete
+[32m|[m [32m|[m * [33m7c1d6ad[m[33m ([m[1;32msave-admin-post[m[33m)[m admin post, delete
+[32m|[m [32m|[m[32m/[m  
+[32m|[m * [33md5944e7[m Obfuscate sensitive data in .env file
+[32m|[m[32m/[m  
+* [33mb16ad4b[m backend user auth
+* [33m36f3341[m comments, Blog tables edits
+* [33m5a1ec3b[m Dashboard
+* [33m4199eaa[m Admin sidebar
+* [33m9481553[m Rename project and clean up README
+* [33m6fec574[m Remove ESLint configuration expansion section
+* [33mc9838e3[m Update README.md
+* [33m7d1108e[m Blog post comments
+* [33m1b06511[m first commit
