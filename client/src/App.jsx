@@ -8,22 +8,30 @@ import AddBlog from './pages/admin/AddBlog'
 import ListBlog from './components/admin/ListBlog'
 import Comments from './pages/admin/Comments'
 import Login from './components/admin/Login'
+import { useAppContext } from './context/AppContext'
+import { ThemeProvider } from './context/ThemeContext'
 import 'quill/dist/quill.snow.css';
+import {Toaster} from 'react-hot-toast'
+
 
 const App = () => {
+  const { token } = useAppContext();
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/blog/:id" element={<Blog/>} />
-        <Route path='/admin' element={true?<Layout/>: <Login/>}>
-          <Route index element={<Dashboard/>}/>
-          <Route path='addBlog' element={<AddBlog/>}/>
-          <Route path='listBlog' element={<ListBlog/>}/>
-          <Route path='comments' element={<Comments/>}/>
-        </Route>
-      </Routes>
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen transition-colors duration-300">
+        <Toaster/>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/blog/:id" element={<Blog/>} />
+          <Route path='/admin' element={token ? <Layout/> : <Login/>}>
+            <Route index element={<Dashboard/>}/>
+            <Route path='addBlog' element={<AddBlog/>}/>
+            <Route path='listBlog' element={<ListBlog/>}/>
+            <Route path='comments' element={<Comments/>}/>
+          </Route>
+        </Routes>
+      </div>
+    </ThemeProvider>
   )
 }
 
