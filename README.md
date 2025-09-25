@@ -408,21 +408,6 @@ npm test
 - `GET /api/admin/dashboard` - Dashboard statistics
 - `GET /api/admin/blogs` - All blogs (including drafts)
 
-## 🤝 Contributing Guidelines
-
-### Development Workflow
-
-1. **Fork the Repository**
-   ```bash
-   git clone https://github.com/your-username/Bloggy.git
-   cd Bloggy
-   git remote add upstream https://github.com/abdhullah200/Bloggy.git
-   ```
-
-2. **Create Feature Branch**
-   ```bash
-   git checkout -b feature/amazing-new-feature
-   ```
 
 3. **Development Standards**
    - Follow ESLint configuration
@@ -443,24 +428,6 @@ npm test
 - **File Naming**: PascalCase for components, camelCase for utilities
 - **Import Order**: External libraries, internal modules, relative imports
 
-## 📄 License & Legal
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-### MIT License Summary
-- ✅ Commercial use allowed
-- ✅ Modification allowed
-- ✅ Distribution allowed
-- ✅ Private use allowed
-- ❌ No warranty provided
-- ❌ No liability accepted
-
-## 👨‍💻 Author & Maintainers
-
-**Abdullah Ariff** - *Lead Developer & Project Creator*
-- **GitHub**: [@abdhullah200](https://github.com/abdhullah200)
-- **Email**: [abdhullahariff118@gmail.com](mailto:abdhullahariff118@gmail.com)
-- **LinkedIn**: [Connect with Abdullah](https://linkedin.com/in/abdullah-ariff)
 
 ### Core Contributors
 - Backend Architecture & API Development
@@ -468,20 +435,12 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - AI Integration & Content Generation
 - Database Design & Optimization
 
-## 🙏 Acknowledgments & Credits
-
-### Open Source Libraries
-- **[React Team](https://reactjs.org/)** - For the amazing React framework
-- **[Tailwind CSS](https://tailwindcss.com/)** - For the utility-first CSS framework
-- **[Vite](https://vitejs.dev/)** - For the lightning-fast build tool
-- **[Motion](https://www.framer.com/motion/)** - For beautiful animations
 
 ### External Services
 - **[Google Gemini API](https://ai.google.dev/)** - For AI content generation capabilities
 - **[ImageKit](https://imagekit.io/)** - For professional image optimization and CDN
 - **[MongoDB Atlas](https://www.mongodb.com/atlas)** - For reliable cloud database hosting
-- **[Vercel](https://vercel.com/)** - For seamless frontend deployment
-
+  
 ### Design Inspiration
 - **Modern Blog Designs** - Contemporary blogging platform aesthetics
 - **Dark Theme Patterns** - Professional dark mode implementation
