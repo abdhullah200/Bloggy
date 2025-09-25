@@ -5,6 +5,16 @@ import Comment from "../models/Comment.js";
 export const adminLogin = async (req, res)=>{
     try{
         const {email, password}= req.body;
+        
+        // Debug logging
+        console.log("Login attempt:");
+        console.log("Received email:", email);
+        console.log("Received password:", password);
+        console.log("Expected email:", process.env.ADMIN_EMAIL);
+        console.log("Expected password:", process.env.ADMIN_PASSWORD);
+        console.log("Email match:", email === process.env.ADMIN_EMAIL);
+        console.log("Password match:", password === process.env.ADMIN_PASSWORD);
+        
         if (email!==process.env.ADMIN_EMAIL || password!==process.env.ADMIN_PASSWORD){
             return res.json({success:false, message:"Invalid Credentials"});
         }

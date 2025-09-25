@@ -20,19 +20,25 @@ npm run dev
 
 ## Features
 
+- **Dark Mode UI**: Modern dark theme with custom color palette
 - Responsive design with Tailwind CSS
 - React Router for navigation
 - Motion animations
-- Blog post management
-- Category filtering
+- Blog post management with AI content generation
+- Comment system
+- Admin dashboard with authentication
+- Image upload with ImageKit integration
 
 ## Tech Stack
 
 - React 19
-- Vite
-- Tailwind CSS 4
+- Vite 6.3.5
+- Tailwind CSS 4 (dark mode only)
 - React Router DOM
-- Motion (Framer Motion)
+- Motion (Framer Motion)  
+- Google Gemini API for AI content generation
+- ImageKit for image optimization
+- React Hot Toast for notifications
 
 # React + Vite
 

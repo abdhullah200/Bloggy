@@ -14,19 +14,19 @@ const Comments = () => {
   }, [])
 
   return (
-    <div className='flex-1 pt-5 px-5 sm:pt-12 sm:pl-16 bg-blue-50/50'>
+    <div className='flex-1 pt-5 px-5 sm:pt-12 sm:pl-16 bg-gradient-to-br from-purple-50 to-indigo-100'>
       <div className='flex justify-between items-center max-w-4xl mb-6'>
         <h1 className='text-2xl font-bold text-gray-800'>Comments</h1>
         <div className='flex gap-4'>
           <button 
             onClick={() => setFilter('Approved')} 
-            className={`shadow-sm border rounded-full px-4 py-1 cursor-pointer text-xs ${filter === 'Approved' ? 'text-primary bg-primary/10 border-primary' : 'text-gray-700 hover:border-primary/50'}`}
+            className={`shadow-sm border rounded-full px-4 py-1 cursor-pointer text-xs ${filter === 'Approved' ? 'text-purple-500 bg-purple-500/10 border-purple-500' : 'text-gray-700 hover:border-purple-500/50'}`}
           >
             Approved
           </button>
           <button 
             onClick={() => setFilter('Not Approved')} 
-            className={`shadow-sm border rounded-full px-4 py-1 cursor-pointer text-xs ${filter === 'Not Approved' ? 'text-primary bg-primary/10 border-primary' : 'text-gray-700 hover:border-primary/50'}`}
+            className={`shadow-sm border rounded-full px-4 py-1 cursor-pointer text-xs ${filter === 'Not Approved' ? 'text-purple-500 bg-purple-500/10 border-purple-500' : 'text-gray-700 hover:border-purple-500/50'}`}
           >
             Not Approved
           </button>
